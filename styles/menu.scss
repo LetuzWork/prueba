@@ -1,0 +1,38 @@
+$menu-mag: 15px;
+$menu-btn-width: 30px;
+
+@mixin btn-line($top){
+    content: " ";
+    position: absolute;
+    top: $top;
+    left: 0;
+    width: $menu-btn-width*0.8;  height: 2px;
+    background: $primaryBtn;
+    @include transition-ease;
+}
+
+.menu-btn{
+    position: absolute;
+    z-index: 5;
+    top: $menu-mag; right: $menu-mag;
+    width: $menu-btn-width; height: 20px;
+
+    cursor: pointer;
+
+    @include transition-ease;
+
+    .symbol{
+        @include btn-line($menu-mag/2);
+        height: 2.5px !important;
+        
+        &::before{ @include btn-line(-8px); }
+        &::after{ @include btn-line(8px); }
+        
+        &.open{
+            transform: rotate(720deg);
+            background: transparent;
+            &::before{  transform: rotate(45deg) translate(5px, 8px) ;}
+            &::after{  transform: rotate(-45deg) translate(3px, -7px);}
+        }
+    }
+}

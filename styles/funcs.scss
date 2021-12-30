@@ -1,0 +1,24 @@
+@mixin formatedBox($background, $lighttheme) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    padding: 0 20px 10px 20px;
+    margin: 10px auto;
+
+    
+    background: $background;
+    color: set-text-color($background);
+}
+
+@function set-text-color($color){
+    @if(lightness($color) > 40%){ 
+        @return #000;
+    }@else { @return #eee; }
+}
+
+@mixin transition-ease {
+    transition: all 0.8s ease-out;
+}

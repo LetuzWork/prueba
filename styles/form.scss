@@ -1,0 +1,24 @@
+form{
+    input{
+        margin: 5px 0;
+    }
+    button{
+        background: $primaryBtn;
+        border: none;
+        color: $primaryColor;
+        padding: 5px 30px+10px;
+        transition: 600ms;
+        &:hover{
+            background: $special;
+        }
+    }
+    @include formatedBox(#000,true);
+}
+
+footer{
+    @include formatedBox(#854,true);
+}
+
+header{
+    @extend form;
+}

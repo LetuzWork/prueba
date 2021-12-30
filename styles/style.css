@@ -1,0 +1,136 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  text-align: center;
+}
+
+form, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px 10px 20px;
+  margin: 10px auto;
+  background: #000;
+  color: #eee;
+}
+
+form input, header input {
+  margin: 5px 0;
+}
+
+form button, header button {
+  background: tomato;
+  border: none;
+  color: #eee;
+  padding: 5px 40px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+form button:hover, header button:hover {
+  background: coral;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px 10px 20px;
+  margin: 10px auto;
+  background: #854;
+  color: #eee;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 5;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.menu-btn .symbol {
+  content: " ";
+  position: absolute;
+  top: 7.5px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: tomato;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  height: 2.5px !important;
+}
+
+.menu-btn .symbol::before {
+  content: " ";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: tomato;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.menu-btn .symbol::after {
+  content: " ";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: tomato;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.menu-btn .symbol.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.menu-btn .symbol.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.menu-btn .symbol.open::after {
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+/*# sourceMappingURL=style.css.map */
